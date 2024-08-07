@@ -1,4 +1,4 @@
-name: dockerloginDEVQA
+name: dockerloginDEVQAWithApprover
 
 # Controls when the workflow will run
 on:
