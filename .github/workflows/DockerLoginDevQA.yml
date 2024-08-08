@@ -22,9 +22,9 @@ jobs:
     - name: Docker Pull
       run: docker pull hello-world
     - name: Docker Tag
-      run: docker tag hello-world abhijitacntraining3/dockerdemo
+      run: docker tag hello-world abhijitacntraining3/dockerdemo:hellov1
     - name: Docker Push
-      run: docker push abhijitacntraining3/dockerdemo
+      run: docker push abhijitacntraining3/dockerdemo:hellov1
   LogintodockerhubQA:
     runs-on: ubuntu-latest
     environment: QA
@@ -38,6 +38,6 @@ jobs:
     - name: Docker Pull
       run: docker pull nginx
     - name: Docker Tag
-      run: docker tag nginx abhijitacntraining3/dockerdemo
+      run: docker tag nginx abhijitacntraining3/dockerdemo:nginxv1
     - name: Docker Push
-      run: docker push abhijitacntraining3/dockerdemo
+      run: docker push abhijitacntraining3/dockerdemo:nginxv1
