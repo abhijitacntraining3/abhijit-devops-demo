@@ -18,13 +18,13 @@ jobs:
       uses: docker/login-action@v2.1.0
       with:
        username: ${{secrets.DOCKERHUBUSERNAME}}
-       password: ${{secrets.DOCKERPUSHPAT}}
+       password: ${{secrets.DOCKERHUBPASSWORD}}
     - name: Docker Pull
       run: docker pull hello-world
     - name: Docker Tag
-      run: docker tag hello-world abhijitacntraining3/dockerdemo:hellov1
+      run: docker tag hello-world abhijitacntraining3/dockerdemo
     - name: Docker Push
-      run: docker push abhijitacntraining3/dockerdemo:hellov1
+      run: docker push abhijitacntraining3/dockerdemo
   LogintodockerhubQA:
     runs-on: ubuntu-latest
     environment: QA
@@ -34,10 +34,10 @@ jobs:
       uses: docker/login-action@v2.1.0
       with:
        username: ${{secrets.DOCKERHUBUSERNAME}}
-       password: ${{secrets.DOCKERPUSHPAT}}
+       password: ${{secrets.DOCKERHUBPASSWORD}}
     - name: Docker Pull
       run: docker pull nginx
     - name: Docker Tag
-      run: docker tag nginx abhijitacntraining3/dockerdemo:nginxv1
+      run: docker tag nginx abhijitacntraining3/dockerdemo
     - name: Docker Push
-      run: docker push abhijitacntraining3/dockerdemo:nginxv1
+      run: docker push abhijitacntraining3/dockerdemo
