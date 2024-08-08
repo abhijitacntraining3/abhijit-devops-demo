@@ -19,7 +19,7 @@ jobs:
       with:
        registry: registry-1.docker.io
        username: ${{secrets.DOCKERHUBUSERNAME}}
-       password: ${{secrets.DOCKERHUBPASSWORD}}
+       password: ${{secrets.DOCKERPUSHPAT}}
     - name: Docker Pull
       run: docker pull hello-world
     - name: Docker Tag
@@ -36,7 +36,7 @@ jobs:
       with:
        registry: registry-1.docker.io
        username: ${{secrets.DOCKERHUBUSERNAME}}
-       password: ${{secrets.DOCKERHUBPASSWORD}}
+       password: ${{secrets.DOCKERPUSHPAT}}
     - name: Docker Pull
       run: docker pull nginx
     - name: Docker Tag
